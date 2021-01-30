@@ -3,10 +3,10 @@
 ---
 ### About
 [ENG] This is a [PocketMine-MP](https://github.com/pmmp/PocketMine-MP) (or forks) plugin to secure your server by registering xuids ! :grin:<br/>
-This plugin associates the unique xuid of an xbox account and associates it with the nickname. Thus, an another xbox account cannot connect to the account of an existing nickname ! <br/>
+This plugin records the unique xuid of an xbox account and associates it with the nickname. Thus, an another xbox account cannot connect to the account of an existing nickname ! <br/>
 <br/>
 [FRA] C'est un [PocketMine-MP](https://github.com/pmmp/PocketMine-MP) plugin qui sécurise ton serveur en enregistrant les xuids ! :grin: <br/>
-Ce plugin associe le xuid unique d'un compte xbox et l'associe a un pseudo. Ainsi, si un autre compte xbox ne peut pas se connecter sur le compte d'un pseudo existant !
+Ce plugin enregistre le xuid unique d'un compte xbox et l'associe a un pseudo. Ainsi, un autre compte xbox ne peut pas se connecter sur le compte d'un pseudo existant !
 
 ---
 ### How to use
