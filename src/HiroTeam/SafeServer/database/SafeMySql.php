@@ -90,7 +90,8 @@ class SafeMySql implements ISafeData
     /**
      * @return MySQLi
      */
-    private function getDatabase(): MySQLi{
+    private function getDatabase(): MySQLi
+    {
         return new MySQLi(
             $this->config->get('mysql-host'),
             $this->config->get('mysql-user'),
