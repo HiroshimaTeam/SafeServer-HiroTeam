@@ -10,9 +10,9 @@ ce plugin associe le xuid unique d'un compte xbox et l'associe a un pseudo. Ains
 
 ---
 ### How to use
-[ENG] Configure in config.yml texts and xp to need rename and repare + Need FormAPI depend</br>
+[ENG] Configure in config.yml your better database (mysql or sqlite3) and custom the kick message</br>
 
-[FRA] Configurer dans le config.yml les texts et l'xp necéssaire pour rename et reparer + Doit avoir FormAPI d'installer</br>
+[FRA] Configurer dans le config.yml votre base de donnée (mysql ou sqlite3) préféré et customise le message de kick</br>
 
 FormAPI: https://poggit.pmmp.io/p/FormAPI/1.3.0
 
