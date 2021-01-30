@@ -46,7 +46,8 @@ class CommandFactory
         $this->init();
     }
 
-    private function init(){
+    private function init()
+    {
         $this->main->getServer()->getCommandMap()->registerAll('SafeServer', [
             new SafeDelete($this->main)
         ]);
