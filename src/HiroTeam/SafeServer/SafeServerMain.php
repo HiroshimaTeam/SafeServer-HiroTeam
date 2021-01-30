@@ -55,7 +55,7 @@ class SafeServerMain extends PluginBase implements Listener
         new CommandFactory($this);
     }
 
-    private function initProvider()
+    private function initProvider(): void
     {
         switch ($this->getConfig()->get('provider')){
             case 'sqlite3':
@@ -70,7 +70,7 @@ class SafeServerMain extends PluginBase implements Listener
     /**
      * @return SafeMySql|SafeSqLite3
      */
-    public function getProvider()
+    public function getProvider(): void
     {
         return $this->provider;
     }
