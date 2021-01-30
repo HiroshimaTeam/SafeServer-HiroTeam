@@ -1,0 +1,7 @@
+name: SafeServer-HiroTeam
+author: HiroTeam-Willy
+version: 1.0.0
+api: 3.0.0
+main: HiroTeam\SafeServer\SafeServerMain
+website: https://github.com/HiroshimaTeam
+    
