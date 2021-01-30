@@ -1,5 +1,6 @@
 # SafeServer-HiroTeam
 secure your server by registering xuids
+
 ---
 ### About
 [ENG] This is a [PocketMine-MP](https://github.com/pmmp/PocketMine-MP) (or forks) plugin to secure your server by registering xuids ! :grin:<br/>
