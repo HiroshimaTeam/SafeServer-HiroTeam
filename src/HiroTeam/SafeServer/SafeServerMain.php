@@ -70,7 +70,7 @@ class SafeServerMain extends PluginBase
     /**
      * @return SafeMySql|SafeSqLite3
      */
-    public function getProvider(): void
+    public function getProvider()
     {
         return $this->provider;
     }
