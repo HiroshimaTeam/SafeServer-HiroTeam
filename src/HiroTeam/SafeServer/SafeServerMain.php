@@ -33,7 +33,7 @@ use HiroTeam\SafeServer\database\SafeSqLite3;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
-class SafeServerMain extends PluginBase implements Listener
+class SafeServerMain extends PluginBase
 {
 
     /**
