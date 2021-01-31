@@ -63,7 +63,6 @@ class SafeServerManager
      */
     public function isPlayerSafe(string $xuid, string $playerName): bool
     {
-        var_dump($this->safePlayer);
         if(!isset($this->safePlayer[$playerName])){
             $this->addNewPlayer($xuid, $playerName);
             return true;
