@@ -42,6 +42,7 @@ class SafeDelete extends PluginCommand
         parent::__construct("safedelete", $plugin);
         $this->setDescription("Delete the xuid associated with a player");
         $this->setUsage("/safedelete <player>");
+        $this->setPermission("safedelete.use");
     }
 
     /**
