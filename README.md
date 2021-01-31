@@ -14,7 +14,7 @@ Ce plugin enregistre le xuid unique d'un compte xbox et l'associe a un pseudo. A
 
 [FRA] Configurer dans le config.yml votre base de donnée (mysql ou sqlite3) préféré et customise le message de kick</br>
 
-Command: /safedelete <player> | Delete the xuid associated with a player | permission: safedelete.use
+Command: ```/safedelete <player>``` | Delete the xuid associated with a player | permission: safedelete.use
 
 ---
 ### **This plugin was tested (and works) on:**
