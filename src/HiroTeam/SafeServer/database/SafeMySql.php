@@ -25,6 +25,7 @@
  *
  * GitHub: https://github.com/HiroshimaTeam/SafeServer-HiroTeam
  */
+
 namespace HiroTeam\SafeServer\database;
 
 use HiroTeam\SafeServer\SafeServerMain;
@@ -68,7 +69,7 @@ class SafeMySql implements ISafeData
     public function removeUser(string $playerName): void
     {
         $db = $this->getDatabase();
-        $db->query("DELETE FROM safeServer WHERE username = '$playerName';");
+        $db->query("DELETE FROM safeServer WHERE username LIKE '$playerName';");
         $db->close();
     }
 
