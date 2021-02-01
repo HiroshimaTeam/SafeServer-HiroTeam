@@ -25,6 +25,7 @@
  *
  * GitHub: https://github.com/HiroshimaTeam/SafeServer-HiroTeam
  */
+
 namespace HiroTeam\SafeServer\database;
 
 use HiroTeam\SafeServer\SafeServerMain;
@@ -44,7 +45,7 @@ class SafeSqLite3 implements ISafeData
     public function __construct(SafeServerMain $main)
     {
         $this->db = new SQLite3($main->getDataFolder() . 'safeServer.db');
-        $this->db->exec('CREATE TABLE IF NOT EXISTS safeServer (xuid TEXT, username TEXT);');
+        $this->db->exec('CREATE TABLE IF NOT EXISTS safeServer (xuid TEXT, username TEXT COLLATE NOCASE);');
     }
 
     /**
@@ -64,7 +65,7 @@ class SafeSqLite3 implements ISafeData
      */
     public function removeUser(string $playerName): void
     {
-        $this->db->query("DELETE FROM safeServer WHERE username = '$playerName';");
+        $this->db->query("DELETE FROM safeServer WHERE username LIKE '$playerName';");
     }
 
     /**
@@ -74,7 +75,7 @@ class SafeSqLite3 implements ISafeData
     {
         $result = $this->db->query('SELECT * FROM safeServer;');
         $all = [];
-        while ($resultArr = $result->fetchArray(SQLITE3_ASSOC)){
+        while ($resultArr = $result->fetchArray(SQLITE3_ASSOC)) {
             array_push($all, $resultArr);
         }
         return $all;
