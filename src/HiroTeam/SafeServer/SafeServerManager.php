@@ -25,6 +25,7 @@
  *
  * GitHub: https://github.com/HiroshimaTeam/SafeServer-HiroTeam
  */
+
 namespace HiroTeam\SafeServer;
 
 class SafeServerManager
@@ -49,10 +50,10 @@ class SafeServerManager
         $this->init();
     }
 
-    private function init() : void
+    private function init(): void
     {
-        foreach($this->main->getProvider()->findAll() as $row){
-           $this->safePlayer[$row['username']] = $row['xuid'];
+        foreach ($this->main->getProvider()->findAll() as $row) {
+            $this->safePlayer[strtolower($row['username'])] = $row['xuid'];
         }
     }
 
@@ -63,11 +64,12 @@ class SafeServerManager
      */
     public function isPlayerSafe(string $xuid, string $playerName): bool
     {
-        if(!isset($this->safePlayer[$playerName])){
+        $playerName = strtolower($playerName);
+        if (!isset($this->safePlayer[$playerName])) {
             $this->addNewPlayer($xuid, $playerName);
             return true;
         }
-        if($this->safePlayer[$playerName] === $xuid){
+        if ($this->safePlayer[$playerName] === $xuid) {
             return true;
         }
         return false;
@@ -79,7 +81,8 @@ class SafeServerManager
      */
     public function deleteOne(string $playerName): bool
     {
-        if(isset($this->safePlayer[$playerName])){
+        $playerName = strtolower($playerName);
+        if (isset($this->safePlayer[$playerName])) {
             unset($this->safePlayer[$playerName]);
             $this->main->getProvider()->removeUser($playerName);
             return true;
@@ -91,8 +94,9 @@ class SafeServerManager
      * @param string $xuid
      * @param string $playerName
      */
-    private function addNewPlayer(string $xuid, string $playerName) : void
+    private function addNewPlayer(string $xuid, string $playerName): void
     {
+        $playerName = strtolower($playerName);
         $this->safePlayer[$playerName] = $xuid;
         $this->main->getProvider()->addUser($xuid, $playerName);
     }
